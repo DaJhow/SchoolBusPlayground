@@ -32,4 +32,19 @@ PlaygroundPage.current.liveView = canvas
 
  ## A vous de jouer !
  */
+for i in 0...60 {
+    canvas.createRoadSection()
+    if i < 28 {
+        canvas.moveBusForward()
+    }
+    if i == 3 || i == 5 || i == 6 || i == 12 || i == 16 || i == 24 {
+        canvas.createHomeRoadSection()
+        canvas.stopBus()
+        canvas.moveBusForward()
+    }
+    if i == 27 {
+        canvas.createSchoolRoadSection()
+        canvas.stopBus()
+    }
+}
 
