@@ -48,10 +48,14 @@ for i in 0...60 {
 }
 
 class Bus {
-    var drivername: String = "Joe"
+    var driverName: String
     var seats: Int = 20
     var seatsOccupied: Int = 0
     let wheels = 4
+    
+    init(driverName: String) {
+        self.driverName = driverName    // self.driverName = Propriété // driverName = parametre
+    }
 }
 
 class Road {
@@ -62,5 +66,5 @@ class RoadSection {
     
 }
 
-var unBus = Bus()
-print(unBus.drivername)
+var unBus = Bus(driverName: "Joe")
+print(unBus.driverName)
