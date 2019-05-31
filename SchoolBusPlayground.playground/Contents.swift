@@ -25,6 +25,12 @@ class Bus {
     func stop() {
         canvas.stopBus()
     }
+    
+    func drive(road: Road) {
+        for _ in road.sections {
+            moveForward()
+        }
+    }
 }
 
 class Road {
@@ -43,7 +49,5 @@ class RoadSection {
 }
 
 var unBus = Bus(driverName: "Joe")
-print(unBus.driverName)
-
 var road = Road(length: 20)
-unBus.moveForward()
+unBus.drive(road: road)
