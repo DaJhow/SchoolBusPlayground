@@ -21,6 +21,10 @@ class Bus {
     func moveForward() {
         canvas.moveBusForward()
     }
+    
+    func stop() {
+        canvas.stopBus()
+    }
 }
 
 class Road {
