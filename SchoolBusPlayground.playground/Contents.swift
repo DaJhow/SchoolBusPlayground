@@ -35,7 +35,17 @@ class Bus {
 
 class Road {
     var sections = [RoadSection]()
+    static let maxLength = 77
+    
+    static func createStraightRoad() -> Road {
+        return Road(length: 11)
+    }
+    
     init(length: Int) {
+        var length = length
+        if length > Road.maxLength {
+            length = Road.maxLength
+        }
         for _ in 0..<length {
             self.sections.append(RoadSection())
         }
@@ -49,5 +59,10 @@ class RoadSection {
 }
 
 var unBus = Bus(driverName: "Joe")
-var road = Road(length: 20)
-unBus.drive(road: road)
+
+//var road = Road(length: 78)
+
+Road.createStraightRoad()
+
+unBus.moveForward()
+
