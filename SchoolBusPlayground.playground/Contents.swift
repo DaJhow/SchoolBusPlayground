@@ -40,7 +40,6 @@ for i in 0...60 {
     if i == 3 || i == 5 || i == 6 || i == 12 || i == 16 || i == 24 {
         canvas.createHomeRoadSection()
         canvas.stopBus()
-        canvas.moveBusForward()
     }
     if i == 27 {
         canvas.createSchoolRoadSection()
@@ -48,3 +47,20 @@ for i in 0...60 {
     }
 }
 
+class Bus {
+    var drivername: String = "Joe"
+    var seats: Int = 20
+    var seatsOccupied: Int = 0
+    let wheels = 4
+}
+
+class Road {
+    var sections = [RoadSection]()
+}
+
+class RoadSection {
+    
+}
+
+var unBus = Bus()
+print(unBus.drivername)
