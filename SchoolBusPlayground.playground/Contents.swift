@@ -6,6 +6,7 @@ let canvas = Canvas()
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = canvas
 
+//
 
 class Bus {
     var driverName: String
@@ -15,6 +16,10 @@ class Bus {
     
     init(driverName: String) {
         self.driverName = driverName    // self.driverName = Propriété // driverName = parametre
+    }
+    
+    func moveForward() {
+        canvas.moveBusForward()
     }
 }
 
@@ -37,3 +42,4 @@ var unBus = Bus(driverName: "Joe")
 print(unBus.driverName)
 
 var road = Road(length: 20)
+unBus.moveForward()
